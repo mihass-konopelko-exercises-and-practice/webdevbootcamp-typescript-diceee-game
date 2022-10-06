@@ -1,0 +1,117 @@
+/* Color Palette Base: https://colorhunt.co/palette/251d3a2a2550e04d01ff7700 
+#251D3A
+#2A2550
+#E04D01
+#FF7700
+*/
+
+body {
+    background-color: #E04D01;
+    text-align: center;
+    font-family: 'Macondo', cursive;
+}
+
+h1, h2, h3 {
+    color: #251D3A;
+}
+
+.container {
+    padding: 0 25% 0 25%;
+}
+
+/* Title */
+#title {
+    background-color: #2A2550;
+}
+
+#title h1
+{
+    color: #FF7700;
+    font-weight: 700;
+    margin: 3% auto 1%;
+}
+
+/* Play Area */
+#play-area h3 {
+    font-size: 3rem;
+    margin: 45% auto 0%;
+}
+
+#result-header {
+    margin: 50% auto 5%;
+}
+
+
+footer {
+    background-color: #2A2550;
+    color: #FF7700;
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* Dice styles using CSS-grid */
+.face {
+    display: grid;
+    grid-template-areas:
+       
+    "tl .  tr"
+    "ml mm mr"
+    "bl .  br";
+
+    flex: 0 0 auto;
+    margin: 10% auto;
+    padding: 10px;
+    width: 104px;
+    height: 104px;
+
+    background-color: #e7e7e7;
+    box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7,
+        inset -5px 0 #d7d7d7;
+    border-radius: 10%;
+    
+}
+
+.pip {
+	display: block;
+	align-self: center;
+	justify-self: center;
+	width: 24px;
+	height: 24px;
+	border-radius: 50%;
+	background-color: #333;
+	box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
+
+.pip:nth-child(2) {
+    grid-area: br;
+}
+.pip:nth-child(3) {
+    grid-area: tr;
+}
+.pip:nth-child(4) {
+    grid-area: bl;
+}
+.pip:nth-child(5) {
+    grid-area: ml;
+}
+.pip:nth-child(6) {
+    grid-area: mr;
+}
+
+/* This selects the last pip of odd-valued dice (1, 3, 5) and positions the pip in the center */
+.pip:nth-child(odd):last-child {
+    grid-area: mm;
+}
+
+
+
+
